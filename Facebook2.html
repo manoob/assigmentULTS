@@ -1,0 +1,103 @@
+<html>
+<head>
+<title>
+Facebook
+</title>
+<script type="text/javascript">
+
+function myFun()
+{
+	
+
+	var username=document.getElementById("txt2").value;
+	var pwd=document.getElementById("pwd2").value;
+	var d=new Date(document.getElementById("date").value).getFullYear();
+	var sd=new Date();
+	
+	var n=sd.getFullYear();
+	var a=(n-d);
+	
+	if(a<=13)
+	{
+		alert("your are so young.....!!!!!!!!!!!")	
+	}
+
+
+	if(username.length<3)
+	{	
+		alert("first name must have at least 5 charactor");
+		
+	}
+
+	var dob=document.getElementById("date").value;
+	document.write(dob);
+	if(dob=="")
+	{
+		alert("select date of birth");
+	}
+
+	if(pwd.length>=8 && pwd.length<=13)
+	{
+		alert("successful");	
+	}
+	else
+	{
+		alert("password not exeding 13 charactor and have morethan 8 charactor");
+	}
+	
+
+}
+
+</script>
+</head>
+<body bgcolor="dedefa">
+<link rel="stylesheet" type="text/css" href="Facebook.css">
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="dd col-md-6 col-lg-6 col-sm-6 col-xs-6 ">
+		<br><font class="ff">Facebook</font>
+		</div>
+		<div class="dd col-md-2 col-lg-2 col-sm-6 col-xs-6 ">
+		<p class="ppp ab">		      Email or phone</p>
+		<input class="ab" type=text name="txt1"placeholder="Username">
+		</div>
+		<div class="dd col-md-3 col-lg-3 col-sm-6 col-xs-6 ">
+		<p class="ppp a">		      Password</p>
+		<input class="a" type=password name="pwd1"placeholder="password">
+		<br><br><p class="ppp a">		      forget Password ?</p>
+		</div>
+		<div class="dd col-md-1 col-lg-1 col-sm-6 col-xs-6 ">
+		<br>
+		<input class="btn btn-primary" type=submit name="btn" value="Login" >
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-lg-6 hidden-sm hidden-xs">
+		<img class="imgs" src="images/connectingPeople.jpg">
+		</div>
+		<div class="cc imgs col-md-6 col-lg-6 col-sm-6 col-xs-6 ">
+		
+		<p class="pp">Sign Up</p>
+		<br><input class="aa" type=text name="txt2" id="txt2" placeholder="first name"><input class="a" type=text name="txt3" placeholder="last name">
+		<br><br><input class="aa" type=text name="txt4" id="txt4" placeholder="Mobile Number" size="60">
+		<br><br><input class="aa" type=text name="txt5" id="txt5" placeholder="Email" size="60">
+		<br><br><input class="aa" type="date" name="dob" id="date" size="60">
+		<br><br><input class="aa" type=password name="pwd2" id="pwd2" placeholder="Password" size="60">
+		<br><br><p class="aa"><font size="1">	By clicking Sign Up, you agree to our terms  and that you have read our Date Use Policy,<br>Including our Cookie Use.
+		<br><br><input class="btn btn-success" type="button" name="btn2" value="Sign Up Now!" onclick="myFun()">
+
+		
+		</div>
+	</div>
+</div>
+</body>
+</html>
