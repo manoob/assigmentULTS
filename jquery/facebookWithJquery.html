@@ -1,0 +1,110 @@
+<html>
+<head>
+<title>facebook with jquery</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function()
+{
+	$("#btn-login").click(function(){
+	var user=$("#username").val();
+	var pwrd=$("#pwd1").val();
+	if(user==""){
+	$("#lbl1").html("pleace enter your username");
+	}
+	else if(pwrd==""){
+	$("#lbl2").html("pleace enter your password");
+	}	
+	else {
+		$("#lbl1").html("");
+		$("#lbl2").html("");
+		alert("login successfull");
+	}
+	});
+	$("#btn-login2").click(function(){
+	var fnm=$("#fnm").val();
+	var lnm=$("#lnm").val();
+	var mob=$("#mob").val();
+	var eml=$("#eml").val();
+	var pwrd2=$("#pwd2").val();
+	if(fnm==""){
+		alert("enter your firstname");
+	}
+	else if(fnm.length<3){
+		alert("first name must have at least 3 charactor");
+	}
+	if(lnm==""){
+	$("#lbl4").html("enter your lastname");
+	}
+	else {
+	$("#lbl4").html("");
+	}
+	if(mob==""){
+	$("#lbl5").html("enter your mobile");
+	}
+	else {
+	$("#lbl5").html("");
+	}
+	if(eml==""){
+	$("#lbl6").html("enter your Email id");
+	}
+	else {
+	$("#lbl6").html("");
+	}
+	if(pwrd2==""){
+	$("#lbl7").html("enter your password");
+	}	
+	else {
+	$("#lbl7").html("");
+	}
+	});
+
+});
+
+</script>
+</head>
+<body>
+<link rel="stylesheet" type="text/css" href="Facebook.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<div class="container-fluid">
+	<div class="row">
+		<div class="dd col-md-6 col-lg-6 col-sm-12 col-xs-12 ">
+		<br><font class="ff">Facebook</font>
+		</div>
+		<div class="dd col-md-2 col-lg-2 col-sm-6 col-xs-6 ">
+		<p class="ppp ab">		      Email or phone</p>
+		<input class="ab" type=text name="txt1" id="username" placeholder="Username">
+		</div>
+		<div class="dd col-md-3 col-lg-3 col-sm-6 col-xs-6 ">
+		<p class="ppp a">		      Password</p>
+		<input class="a" type=password name="pwd1" id="pwd1" placeholder="password"><label id="lbl2"></label>
+		<br><br><p class="ppp a">		      forget Password ?</p>
+		</div>
+		<div class="dd col-md-1 col-lg-1 col-sm-6 col-xs-6 ">
+		<br>
+		<input type=button class="btn btn-primary" id="btn-login" name="btn" value="Login" >
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-6 col-lg-6 hidden-sm hidden-xs">
+		<img class="imgs" src="images/connectingPeople.jpg">
+		</div>
+		<div class="cc imgs col-md-6 col-lg-6 col-sm-6 col-xs-6 ">
+		
+		<p class="pp">Sign Up</p>
+		<br><input class="aa" type=text name="txt2" id="fnm" placeholder="first name"><label id="lbl3"></label><input class="a" type=text id="lnm" name="txt3" placeholder="last name"><label class="aa"id="lbl4"></label>
+		<br><br><input class="aa" type=text name="txt4" id="mob" placeholder="Mobile Number" size="60"><label class="aa" id="lbl5"></label>
+		<br><br><input class="aa" type=text name="txt5" id="eml" placeholder="Email" size="60"><label class="aa" id="lbl6"></label>
+		<br><br><input class="aa" type="date" name="dob" id="date" size="60">
+		<br><br><input class="aa" type=password name="pwd2" id="pwd2" placeholder="Password" size="60"><label class="aa" id="lbl7"></label>
+		<br><br><p class="aa"><font size="1">	By clicking Sign Up, you agree to our terms  and that you have read our Date Use Policy,<br>Including our Cookie Use.
+		<br><br><input type=button class="btn btn-success" id="btn-login2" name="btn2" value="Sign Up Now!">
+
+		
+		</div>
+	</div>
+</div>
+</body>
+</html>
